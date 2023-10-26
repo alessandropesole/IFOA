@@ -1,0 +1,59 @@
+main, footer {
+    width: 50%;
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+}
+#immagine {
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+header {
+    text-align:center;
+    font-size: 50%;
+}
+
+.feature {
+    padding-left: 15px;
+    margin-left: 20px black;
+    border-left-color: #FFD774;
+    border-left-style: solid;
+    border-left-width: 1.7px;
+}
+
+figcaption {
+color: #C0C0C0
+}
+
+header p {
+    font-size: 2em;
+    color:#0B5251;
+    border-top: 2px solid;
+    border-color: #FFDD89; 
+    padding:1.1em;
+}
+#logo {
+    width: 30vh;
+}
+
+.slogan {
+    background-color: #FDFBF1;
+}
+ 
+#featured {
+    color:#BA511E
+}
+#elencopuntato {
+    line-height: 1.7rem;
+}
+.titoli {
+padding-bottom: 1.2rem;
+border-bottom-color: #BDF1F0;
+border-bottom-style: solid;
+border-bottom-width: 1.7px;
+}
+#partefinale {
+    padding-left: 1.5rem;
+}
