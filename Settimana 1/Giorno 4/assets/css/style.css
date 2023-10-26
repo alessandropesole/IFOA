@@ -1,0 +1,86 @@
+/* IMPOSTAZIONI GENERALI */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-image:url(../images/sfondo.png);
+    background-repeat: repeat;
+}
+
+/* HEADER */
+header {
+    margin: 1rem;
+    padding: 1px;
+    text-align:center;
+    background-color: #03758F;
+    background-image: linear-gradient(to bottom, #50afcc, #006688);
+    box-shadow: 2px 2px 2px rgb(69, 72, 73);     
+}
+
+#listastelle {
+list-style-type:none;
+margin-block-start: 0px;
+padding-inline-start: 0px;
+text-align: center;
+}
+a:hover {
+    color: red;
+  }
+
+#listastelle li::before {
+content:'★';
+}
+#headerscript {
+    font-size: 70%;
+    color:white;
+}
+#listastelle:hover {
+   color: red;
+}
+#logo {
+    padding: 15px;
+    height:40px;
+}
+
+
+/* MAIN */
+main {
+    font-size: 0.7rem;
+    margin: 1rem;
+    padding: 10px;
+    background-color: #FFFFFF;
+
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+}
+#mariorossi {
+    color:grey;
+}
+code {
+    border: 1px solid darkgray;
+    background-color: #E3E3E3;
+    border-radius: 2px;
+    font-family: 'Poppins', sans-serif;
+}
+#video {
+    width:auto;
+}
+
+
+/* TABELLE */
+
+/* FORM */
+.titoliminori {
+    text-align: center;
+}
+#iscriviti {
+    padding-left:0.3em;
+    padding-right:0.3em;
+    background-color: #3F6BCA;
+    color:white;
+}
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */
