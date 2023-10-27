@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+    /* BODY */
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65;
+    color: #393d41;
+}
+    .headings {
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+
+    /* HEADER */
+header {
+    background-color: black;
+    height: 16vh;
+}
+
+h1 {
+    line-height: 0.5rem;
+}
+
+#logo {
+    width: 150px;
+    padding: 40px;
+}
+
+    /* PRIMO BLOCCO */
+#primoBlocco {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+   
+}
+
+button {
+    background-color: #f04c2f ;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+
+  #primoBlocco a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+ 
+
+    /* SECONDO BLOCCO */
+  #immagineCrop {
+    border-radius: 50%;
+  }
+  #secondoBlocco {
+    padding: 35px;
+  }
+    /* TERZO BLOCCO */
+  #terzoBlocco {
+    background-color: #e22d0e;
+    color:white;
+    padding: 30px 25px 30px 25px;
+    font-family:'Open Sans', sans-serif;
+    
+  }
+  #terzoBlocco h3 {
+    font-family:'Montserrat', sans-serif;
+    font-size: 2.5rem;
+  }
+
+#terzoBlocco p {
+    line-height: 0.4em;
+}
+  #marioRossi {
+    margin:40px;
+  }
+
+  #ceo {
+    font-size: 0.7em;
+  }
+  /* QUARTO BLOCCO */
+  .card{
+    margin:80px 40px 80px 40px;
+    border: 1px solid #dee1e3;
+    border-radius: 0% 0% 1.5% 1.5%;
+  }
+  .card img{
+   width:100%;
+  }
+
+  /* FOOTER */
+  footer {
+    background-color: #25a2c3;
+    color:white;
+    padding: 20px 20px 100px 20px;
+  }
+  footer h3 {
+    font-size: 2em;
+    color:white;
+  }
+  footer p {
+    line-height: 1;
+    color: #c8e7f0;
+  }
+  hr {
+    width:50%;
+  }
+
+  #footerLink {
+    margin-block-end: 0;
+    padding-top:2rem;
+  }
+
+  footer a {
+    color: #c8e7f0;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+footer h3 {
+    font-family: 'Montserrat', sans-serif;
+   
+}
+
+#contatti {
+    line-height: 1;
+}
+address {
+    display:inline;
+    color:#c8e7f0; 
+    font-style: normal;
+    padding-bottom: 2rem;
+}
