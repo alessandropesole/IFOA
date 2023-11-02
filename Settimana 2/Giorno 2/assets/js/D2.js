@@ -49,7 +49,7 @@ let numeroQuattro = 3;
 if (numeroTre === 8 || numeroQuattro === 8) {
   document.getElementById('esercizio4').innerHTML = 'il valore di uno dei due numeri è 8'
 }
-else if (numeroTre - numeroQuattro === 8 || numeroTre + numeroQuattro === 8) {
+else if (numeroTre - numeroQuattro === 8 || numeroTre + numeroQuattro === 8 || numeroQuattro - numeroTre === 8) {
   document.getElementById('esercizio4').innerHTML = 'la loro addizione/sottrazione è uguale a 8'
 }  
 
@@ -60,13 +60,14 @@ else if (numeroTre - numeroQuattro === 8 || numeroTre + numeroQuattro === 8) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let shoppingCart = 45;
-if (shoppingCart <= 50) {
-  document.getElementById('esercizio5').innerHTML = shoppingCart + 10
+let totalshoppingCart = 45;
+let spedizione = 10;
+let totale = totalshoppingCart;
+if (totalshoppingCart < 50) {
+ totale += spedizione;
 }
-else if (shoppingCart > 50) {
-  document.getElementById('esercizio5').innerHTML = shoppingCart 
-}
+  document.getElementById('esercizio5').innerHTML = 'Costo totale: €' + totale;
+
 
 
 /* ESERCIZIO 6
@@ -75,12 +76,15 @@ else if (shoppingCart > 50) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-/*let shoppingCart = 45;
-if (shoppingCart <= 50) {
-  document.getElementById('esercizio6').innerHTML = (shoppingCart - shoppingCart * 20 /100) + 10
+let totalShoppingCart2 = 45;
+totalShoppingCart2 = totalShoppingCart2 * 0.8;
+let spedizione2 = 10;
+let totale2 = totalShoppingCart2;
+
+if (totalShoppingCart2 < 50) {
+ totale2 += spedizione2;
 }
-else if (shoppingCart > 50) {
-  document.getElementById('esercizio6').innerHTML = shoppingCart 
+document.getElementById('esercizio6').innerHTML = 'Costo totale: €' + totale;
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -89,10 +93,25 @@ else if (shoppingCart > 50) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-/*let var1 = 17
-let var2 = 34
-let var3= 188
-if (var1>var2)
+/*let var1 = 17;
+let var2 = 34;
+let var3= 188;
+if (var1 >= var2) {
+  if (var3 >= var1) {
+    document.getElementById('primo').innerHTML = var3;
+    document.getElementById('secondo').innerHTML = var1;
+    document.getElementById('terzo').innerHTML = var2;
+  } else {
+    document.getElementById('primo').innerHTML = var3;
+    document.getElementById('secondo').innerHTML = var2;
+    document.getElementById('terzo').innerHTML = var1;
+  } else {
+    document.getElementById('primo').innerHTML = var1;
+    document.getElementById('secondo').innerHTML = var2;
+    document.getElementById('terzo').innerHTML = var3;
+  }
+}
+
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
@@ -133,11 +152,11 @@ else {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let val = 7
-  if (val < 10) {
+  if (val < 5) {
+      console.log("Meno di 5");
+    } else if (val < 10) {
       console.log("Meno di 10");
-    } else if (val > 5) {
-      console.log("Più di 5");
-    } else if (val ) {
+    } else {
       console.log("Uguale a 10 o maggiore");
     }
 
