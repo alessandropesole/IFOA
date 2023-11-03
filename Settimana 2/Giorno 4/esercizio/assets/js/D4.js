@@ -85,6 +85,7 @@ function epify(stringa) {
     }
   }
   console.log(epify('EPICODE pippo pluto'));
+  console.log(epify('è un corso online'))
    
 
 /* ESERCIZIO 6
@@ -111,15 +112,17 @@ console.log(check3and7(8));
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
-/* function reverseString (epicode) {
-    return epicode.split()
-}
-console.log(reverseString('provo'))
+
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-/*function reverseString (epicode) {
+function reverseString(epicode) {
+    let arrayEpicode=epicode.split('');
+    let arrayCapovolto = arrayEpicode.reverse();
+    let epicodeCapovolto = arrayCapovolto.join('');
+    return epicodeCapovolto;
+ }
+ console.log(reverseString('peppino'));
 
-} 
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
@@ -127,6 +130,20 @@ console.log(reverseString('provo'))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let frase = 'prova esercizio numero otto'
+
+function upperFirst(frase) {
+    let arrayFrase = frase.split(' '); 
+    let risultato = [];
+    for (let i = 0; i < arrayFrase.length; i++) {
+        let primaLettera = arrayFrase[i].charAt(0);
+        let parolaTagliata = arrayFrase[i].slice(1);
+        let parolaFinale = primaLettera.toUpperCase() + parolaTagliata;
+        risultato.push(parolaFinale);
+    }
+    return risultato.join(' ');
+}
+console.log(upperFirst(frase))
 
 
 /* ESERCIZIO 9
@@ -135,12 +152,22 @@ console.log(reverseString('provo'))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-/*function cutString(cut) {
-     return cut.trim().slice(1,-1) 
+function cutString(cut) {
+     return cut.slice(1, cut.length - 1); 
 }
-console.log('ciao a tutti');
+console.log(cutString('ciao a tutti'));
+
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function giveMeRandom(numero) {
+    let arrayNumeri = [];
+    for (let i = 0; i < numero; i++) {
+        arrayNumeri.push(Math.floor(Math.random() * 11));
+
+}
+return arrayNumeri;
+}
+console.log(giveMeRandom(7));
