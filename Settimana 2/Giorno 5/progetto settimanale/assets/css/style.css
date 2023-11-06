@@ -11,6 +11,7 @@ main {
 }
 .blue {
     color: #378083;
+    font-size: 0.8em;
 }
 
 /*HEADER*/
@@ -64,17 +65,51 @@ nav p {
     text-align: start;
 }
 #schede {
+    vertical-align: top;
     background-color: white;
-    height: 50vh;
+    height: 45vh;
     margin-top:45px;
 }
 
 .card {
-    height: 30vh;
+    height: 35vh;
     width: 20vw ;
     
     box-shadow: 8px 8px 19px 1px #9b9797;
-    border-radius: 10% 10% 10% 10%;
-    padding: 10px;
+    border-radius: 7% 7% 7% 7%;
+    margin: 20px;
   
 }
+.immagine {
+    width: 100%;
+}
+#figures p {
+    display: inline;
+    padding:10px 5px 10px 5px ;
+}
+#figures {
+    margin: 35px 0 35px 0;
+}
+
+.figura {
+    margin: 35px 0 35px 0;
+}
+
+#back {
+    padding:10px;
+    background-color:#364759;
+    color:#FAFFFF;
+}
+#back a {
+    
+    color: #FAFFFF;
+}
+/*FOOTER*/
+footer {
+    background-color:#222F3F; 
+}
+#logoFooter {
+    height: 60px;
+    padding: 50px
+}
+
