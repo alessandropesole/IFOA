@@ -67,12 +67,12 @@ nav p {
 #schede {
     vertical-align: top;
     background-color: white;
-    height: 45vh;
+    height: 60vh;
     margin-top:45px;
 }
 
 .card {
-    height: 35vh;
+    height: 45vh;
     width: 20vw ;
     
     box-shadow: 8px 8px 19px 1px #9b9797;
@@ -100,12 +100,15 @@ nav p {
     background-color:#364759;
     color:#FAFFFF;
 }
+
+/*FOOTER*/
 #back a {
     
     color: #FAFFFF;
 }
-/*FOOTER*/
+
 footer {
+    text-align: center;
     background-color:#222F3F; 
 }
 #logoFooter {
