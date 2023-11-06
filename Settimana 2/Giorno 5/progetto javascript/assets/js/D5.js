@@ -92,7 +92,6 @@ console.log('quinto esercizio')
 const justTrims = []
 
 
-
 /* ESERCIZIO 8
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
     "color" ha valore "b", mostra in console "Fizz". Altrimenti, mostra in console "Buzz".
@@ -100,7 +99,7 @@ const justTrims = []
 
 //RISPOSTA
 console.log('ottavo esercizio')
-function colori (){
+function fizzB (){
 for(let i=0; i<cars.length; i++) {
   if(cars[i].color.charAt(0) === 'b') {
     console.log('Fizz');
@@ -109,18 +108,19 @@ for(let i=0; i<cars.length; i++) {
   }
   }
 }
-colori()
+fizzB()
 
 /* ESERCIZIO 9
     Utilizza un ciclo while per stampare in console i valori del seguente array numerico fino al raggiungimento del numero 32.
 */
 
-//RISPOSTA
-console.log('nono esercizio')
+
 const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ]
 
+//RISPOSTA
+console.log('nono esercizio')
 let index = 0;
 while (index < numericArray.length) {
   const numero = numericArray[index];

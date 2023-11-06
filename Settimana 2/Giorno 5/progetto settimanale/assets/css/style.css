@@ -1,11 +1,80 @@
 /* Your styles here */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin : 0
+    margin : 0;
+    background-color:#E9EDEE;
 }
-header {
-    
-    background-color: #222F3F;
-    padding-left: px; 
+main {
+    text-align: center;
+    margin:0 2rem 0 2rem;
+}
+.blue {
+    color: #378083;
 }
 
+/*HEADER*/
+header {
+
+    background-color: #222F3F; 
+}
+#logo {
+    height: 50px;
+    padding: 10px 0px 10px 30px;
+
+    
+}
+nav p {
+    display:inline;
+    color: #FAFFFF;
+    padding: 0.5rem;
+}
+#navbar {
+    background-color: #364759;
+    padding: 10px 15px 10px 30px;}
+
+    /*MAIN*/
+#orange {
+    font-size: 1em;
+    background-color: #F56600 ;
+    color: #FAFFFF;
+    margin: 40px 0 40px 0; 
+}
+
+#orange p {
+    padding: 10px 0 10px 0 ;
+}
+
+#heading {
+    color: #FAFFFF;
+    background-image: url(../images/bg-image.png);
+    background-size: contain;
+    
+    background-repeat: repeat;
+    padding: 35px 0 35px 0;
+}
+.descrizione p {
+    display: inline;
+    padding: 10px
+}
+
+.descrizione {
+    padding:15px;
+    font-size: 1.3em;
+    text-align: start;
+}
+#schede {
+    background-color: white;
+    height: 50vh;
+    margin-top:45px;
+}
+
+.card {
+    height: 30vh;
+    width: 20vw ;
+    
+    box-shadow: 8px 8px 19px 1px #9b9797;
+    border-radius: 10% 10% 10% 10%;
+    padding: 10px;
+  
+}
