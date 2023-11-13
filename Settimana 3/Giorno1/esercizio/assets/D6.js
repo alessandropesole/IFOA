@@ -3,9 +3,8 @@
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
 console.log('esercizio 1')
-const myConcat = function (str1,str2) {
-  return str1.slice(0,2).concat(str2.slice(str2.length-3));
-}
+const myConcat = (str1,str2) => str1.slice(0,2).concat(str2.slice(str2.length-3));
+
 console.log(myConcat('Piero','Giovanni').toUpperCase());
 
 /* ESERCIZIO 2 (for)
@@ -26,13 +25,12 @@ console.log(myArray);
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 console.log('esercizio 3');
-const nuovoArray = [10, 4, 5, 6, 67, 54, 57];
 const arrayPari = (array) => {
   return array.filter((el) => el % 2 === 0 );
   
 }
 
-console.log(arrayPari(nuovoArray));
+console.log(arrayPari(myArray));
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
@@ -46,17 +44,17 @@ const arraySomma = (array) => {
   });
   return risultato;
 }
-console.log(arraySomma(nuovoArray));
+console.log(arraySomma(myArray));
 
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 console.log('esercizio 5')
-const somma = (array) => {
+const somma = function (array) {
   return array.reduce((valore, el) => valore + el);
 };
-console.log(somma(nuovoArray));
+console.log(somma(myArray));
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
@@ -90,15 +88,17 @@ console.log(misuraStringa(stringa))
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
-const arrayDispari = [];
-for(let i = 0; i < 100; i++) {
-  
-  if (arrayDispari[i] % 2 !== 0){ 
-    arrayDispari.push(i);
+function odd() {
+  let vuoto = [];
+  for (let i = 0; i < 100; i++) {
+    if (i % 2 === 1) {
+      vuoto.push(i)
+    }
   }
-
+  return vuoto
 }
-console.log(arrayDispari)
+console.log(odd())
+
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
   {
@@ -218,6 +218,11 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+function oldMovies() { 
+  let movies = parseInt(movies(Year).sort());
+  return movies;
+}
+console.log()
 
 
 /* ESERCIZIO 10
