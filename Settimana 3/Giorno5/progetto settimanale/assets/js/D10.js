@@ -133,6 +133,7 @@ console.log(onlyLetters('33 Ciao a 4 tutti324'))
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
+console.log('***Esercizio 6***');
 function isThisAnEmail(email) {
   var chiocciola = email.indexOf('@');
   var punto = email.lastIndexOf('.');
@@ -395,6 +396,7 @@ console.log(onlyInLastMillennium(movies))
 /* ESERCIZIO 16 
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
+console.log('***Esercizio 16***');
 const sumAllTheYears = (array) => {
   return array.reduce((acc, curr) => acc + parseInt(curr.Year), 0)
 }
@@ -463,7 +465,7 @@ rosso();
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
-function aggiungiElementoLista (testo) {
+/*function aggiungiElementoLista (testo) {
   const nuovoItem = document.createElement('li');
   nuovoItem.textContent = testo; 
   const appendi = document.getElementById('myList');
@@ -477,6 +479,7 @@ aggiungiElementoLista('Elemento')
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+console.log('***Esercizio 26***');
 function aggiungiClasse () {
   const tr = document.getElementsByTagName('tr');
   for (let i = 0; i < tr.length; i++) {
