@@ -422,10 +422,10 @@ header {
   display: flex;
   flex-direction: column;
  right:0%;
- bottom:0%
+ bottom:1%
 }
 .tornaSu, .buttonCalendario, .social {
-  font-size: 2rem;
+  font-size: 1.8rem;
   background-color: rgb(255, 255, 255, 0.4);
   padding: 10px 12px;
   margin-top: 1rem ;
@@ -447,7 +447,7 @@ display:block;
     display: flex;
     flex-direction: column;
    right:0%;
-   bottom:0%;
+   bottom:1%;
   }
   .tornaSu, .buttonCalendario, .social {
     font-size: 1.2rem;
@@ -492,10 +492,12 @@ aside div {
   position: relative;
 }
 
-aside div p i{
+aside div .fa-tag{
   position: absolute;
-  right:0%;
-  top:0%;
+  right:5px;
+  top:5px;
+  font-size:4rem;
+  opacity:0.1;
   
 }
 
