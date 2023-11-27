@@ -2,7 +2,9 @@
 
 
 .card {
-    width:350px;
+    width:15vh;
+    min-width: 350px;
+    min-height: 40vh;
     font-family: 'Outfit', sans-serif;
     display : flex;
     flex-direction: column;
@@ -12,6 +14,7 @@
     font-weight:500;
     border-radius: 85px;
     padding-bottom: 2rem;
+    overflow: hidden;
 }
 .buttonCarrello{
     margin-top: 20px;
@@ -27,7 +30,10 @@
 }
 .card img {
     border-radius: 85px 85px 0 0 ;
-    width: 100%;
+   
+    flex-basis:100px;
+    object-fit: cover;
+   
 }
 
 .testo {
@@ -36,8 +42,8 @@
     flex-direction: row;
     align-items:center;
     justify-content:space-around;
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .caption p, .caption h2 {
     margin-block:0;

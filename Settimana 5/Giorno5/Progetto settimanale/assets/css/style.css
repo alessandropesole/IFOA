@@ -1,0 +1,297 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-block-start:0;
+    margin-block-end:0;
+    border: 0;
+    font-size: 100%;
+   
+    vertical-align: baseline;
+}
+
+/*HEADER*/
+
+header {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+    align-items: center;
+    padding: 2vh 0;
+    font-size: 0.8rem;
+    background-color:#FFC017;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index: 3;
+    transition-property: background-color;
+    transition-duration:1s;
+}
+header img {
+    width:10%;
+}
+nav {
+    display:flex ;
+    align-items: center;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar ul li {
+    list-style: none;
+    margin:0 1vw;
+}
+nav button {
+    font-size: 0.8rem;
+    margin:0 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    background-color: black;
+    padding:1vh;
+    border-radius: 4vh;
+    transition-property: background-color;
+    transition-duration:1s;
+}
+nav button a {
+    text-decoration: none;
+    color:white
+}
+
+.active {
+    background-color: white;
+}
+
+.green {
+    background-color: #538724;
+}
+
+/*HERO*/
+.hero {
+    margin-top: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #FFC017;
+    border-bottom: 1px solid black;
+}
+.titolo {
+    margin-left: 7vw;
+}
+
+.titolo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem;
+    font-weight: 500;
+    margin:0;    
+}
+.titolo h2 {
+    font-weight: 200;
+}
+.titolo button {
+    font-size: 1rem;
+    margin:1vh 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    background-color: black;
+    padding:1vh 3vh;
+    border-radius: 4vh;
+}
+.titolo button a {
+    text-decoration: none;
+    color:white
+}
+
+/*PRIMO BLOCCO*/
+
+.sectionPrimoBlocco{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 40px 0;
+  gap: 10%;
+  border-bottom: 1px solid grey;
+  
+  }
+  
+  .articoloPrimoBlocco img{
+    border-radius: 50%;
+    width:1.5vw;
+  }
+  
+  .articoloPrimoBlocco p{
+   margin: 8px 0;
+   
+  }
+  
+  .titoloPrimoBlocco{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0 4%;
+  }
+  
+  .titoloPrimoBlocco img{
+    width: 0.5vw;
+  }
+  .titoloPrimoBlocco h4 {
+    font-size: 0.9rem;
+  }
+  
+  .number p{
+    font-size: 2em;
+    opacity: 0.2;
+
+    margin: 0;
+  }
+  
+ 
+  .articoloPrimoBlocco{
+    width: 400px;
+   display: flex;
+  height: 20vh;
+  gap: 5%;
+  margin-left: 20px;
+  
+  }
+  
+  .descrizione .primaFascia{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   
+  }
+  
+  .primaFascia p{
+    font-size: 0.8em;
+  }
+  .secondaFascia p{
+    font-size: 1em;
+    font-weight: bold;
+  
+  }
+  
+/*CORPO PRINCIPALE*/
+article {
+    display:flex;
+    align-items: center;
+    width:100%;
+    padding: 8vh 0 4vh 10vh;
+}
+.insert {
+    margin-right: 10px;
+}
+.underArticle {
+    display:flex ;
+    align-items: center;
+}
+
+.underArticle button {
+    border: none;
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 20px;
+}
+.dataArticle {
+    display: flex;
+    justify-content: space-between;
+}
+.autore {
+    display:flex;
+    align-items: center;
+}
+.autore img {
+    width:1.8vh;
+    padding-right: 1vw;;
+}
+
+.autore small {
+    font-weight: bold;
+}
+
+.pieceArticle {
+    display: flex;
+    flex-wrap: wrap;
+}
+.pieceArticle h5 {
+    font-size: 1.5rem;
+    margin-block-start: 0.7rem;
+    margin-bottom: 0;
+}
+.pieceArticle p, .underArticle small {
+    font-size: 01rem;
+    opacity: 0.7;
+    margin-block-start: 0.3rem;
+    margin-block-end: 0.3em;
+}
+
+.iconArticle {
+    margin-right: 1.5vw;
+}
+
+.imageArticle img {
+    width:300px
+}
+
+.mainPart {
+    width: 50%;
+}
+
+
+
+
+
+/*ASIDE STICKY*/
+aside {
+    padding: 6vh 0 4vh 10vh;
+    width: 40%;
+    padding-right: 100px;
+    padding-left: 0;
+    margin-left: 200px;
+    position:sticky;
+    top: 20px;
+    left:0
+    
+}
+.super {
+    display: flex;
+    
+}
+.links ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.links ul li {
+    padding:10px 10px 0 0;
+    opacity: 0.7;
+}
+.links {
+    margin-left: -30px;
+    
+}
+.bottoni button {
+    padding: 7px 5px;
+    margin: 5px 3px;
+    background-color: white;
+    border: 0.5px solid gray;
+    opacity: 0.7;
+}
+hr {
+    margin-top: 20px;
+    opacity: 0.6;
+}
+.sticky {
+    width:50%
+}
+
+
+
+
