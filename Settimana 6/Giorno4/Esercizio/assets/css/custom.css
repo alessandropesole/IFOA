@@ -1,0 +1,18 @@
+
+
+
+svg {
+    position: relative;
+    top:15px;
+    left:-17px;
+    color:green;
+    border:2px solid white;
+    border-radius:50%
+}
+li {
+    list-style-type: none;
+}
+
+.feather-bell {
+    padding:20px;
+}
