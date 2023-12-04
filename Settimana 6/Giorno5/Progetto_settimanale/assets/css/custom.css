@@ -1,0 +1,100 @@
+
+/*NAVBAR*/
+
+nav {
+    position:fixed;
+    top:0;
+}
+
+body {
+    color:white;
+    background-color:#141414 ;
+    
+    padding:0;
+
+}
+main {
+    margin-left:20px
+}
+
+
+
+nav {
+    background-color:#141414;
+    font-size: 0.8rem;
+}
+.navbar-toggler-icon {
+    background-color: red;
+}
+.navbar nav li a {
+    padding:0
+}
+
+.dropdown-menu {
+    margin-left: -100px;
+}
+
+.dropdown-item {
+    padding:5px 30px 5px 10px
+}
+
+.dropdown-item:hover {
+    background-color: #141414;
+}
+
+#logoDropdown {
+    padding-right: 5px;
+}
+
+/*MAIN*/
+h3 {
+    margin-right: 40px;
+}
+.btn {
+    border-radius: 0;  
+}
+.carousel-control-prev {
+    margin-left: -75px;
+    
+}
+
+.carousel-control-next {
+    margin-right: -75px;
+}
+
+@media screen and (max-width:768px) {
+    .carousel-control-prev {
+        margin-left: -25px;
+    }
+    
+    .carousel-control-next {
+        margin-right: -25px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .carousel-control-prev {
+        margin-left: -45px;
+    }
+    
+    .carousel-control-next {
+        margin-right: -45px;
+    }
+}
+/*FOOTER*/
+
+footer {
+    color: #808080;
+    font-size:0.8rem;
+}
+
+.bottone-footer {
+   font-size: 0.7rem;
+}
+
+footer svg {
+    margin: 5px;
+}
+footer .row {
+    margin: 0 9vw 0 9vw
+}

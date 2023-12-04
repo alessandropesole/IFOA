@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img height="40px" src="assets/imgs/netflix_logo.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" href="#"><b>Tv Shows</b></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-light" href="#">Recently Added</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">My List</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar nav">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">KIDS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="white" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                                </svg></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img height="40px" src="assets/imgs/avatar.png" alt="avatar">
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+
+                                <li><a class="dropdown-item text-light" href="#">
+                                        <div class="d-flex align-items-center">
+
+                                            <img src="assets/imgs/avatar.png" height="30px" alt="avatar"
+                                                id="logoDropdown"> Francesco
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item text-light" href="#">Manage Profiles</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-light" href="#">Account</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-light" href="#">Help Center</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-light" href="#">Signout Netflix</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--CARDS-->
+    <main>
+        <section class="d-flex justify-content-between align-items-center my-4">
+            <div class="d-flex">
+                <h3>TV Shows</h3>
+                <button
+                    class="btn dropdown-toggle btn-outline-secondary text-white bg-transparent py-0  px-4"><span>Genres</span></button>
+            </div>
+
+            <div>
+                <div class="btn-group mx-4" role="group" aria-label="First group">
+                    <button class="btn  btn-outline-secondary px-4  "><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-list-nested" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5m-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                    </button>
+                    <button class="btn btn-outline-secondary px-4 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-grid" viewBox="0 0 16 16">
+                            <path
+                                d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container-fluid">
+
+            <div class="trending  mb-5 mt-4">
+                <h5 class="text-light mt-2 mb-2">Trending Now</h5>
+                <div id="prima-riga" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="colonna">
+                                <div class="row g-1">
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media0.webp">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media1.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media2.webp">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media3.webp">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media4.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media5.webp">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="colonna">
+                                <div class="row g-1">
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media0.webp">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media1.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media2.webp">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media3.webp">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media4.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media5.webp">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#prima-riga"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#prima-riga"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="watch  mb-5">
+                <h5 class="text-light mt-2 mb-2">Watch It Again</h5>
+                <div id="seconda-riga" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="colonna">
+                                <div class="row g-1">
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media6.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media7.webp">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media8.webp">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media9.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media10.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media11.jpg">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="colonna">
+                                <div class="row g-1">
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media6.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media7.webp">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media8.webp">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media9.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media10.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media11.jpg">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#seconda-riga"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#seconda-riga"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="new-releases mb-5">
+                <h5 class="text-light mt-2 mb-2">New Releases</h5>
+                <div id="terza-riga" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="colonna">
+                                <div class="row g-1">
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media12.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media13.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media14.webp">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media15.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media16.webp">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media17.jpg">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="colonna">
+                                <div class="row g-1">
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media12.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media13.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media14.webp">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media15.jpg">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media16.webp">
+                                    </div>
+                                    <div class="col-md-2 col-sm-4 col-xs-6">
+                                        <img class="img-fluid " src="assets/imgs/media/media17.jpg">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#terza-riga"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#terza-riga"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+
+
+    </main>
+
+    <!--FOOTER-->
+    <div class="container" style="margin-top: 12vh;">
+        <footer>
+            <div class="row mb-2">
+                <div class="col">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="30" width="28"
+                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                                <path fill="#808080"
+                                    d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="30" width="28"
+                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                                <path fill="#808080"
+                                    d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" fill="currentColor"
+                                class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path fill="#808080"
+                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" fill="currentColor"
+                                class="bi bi-youtube" viewBox="0 0 16 16">
+                                <path fill="#808080"
+                                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408z" />
+                            </svg>
+                        </li>
+                        </ul>   
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-xs-6 mt-md-0 mt-sm-5">
+                    <ul class="navbar-nav">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Audio and Subtitles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Media Center</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Contact Us</a>
+                        </li>
+                        <li class="nav-item mt-4">
+                            <button class="btn btn-outline-secondary bottone-footer"><small>Service
+                                    Code</small></button>
+                        </li>
+                        <li class="nav-item mt-1">
+                            <a class="nav-link" href="javascript:void(0)">© 1997-2021 Netflix Inc</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 col-xs-6 mt-md-0 mt-sm-5">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Audio Description</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Investor Relations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Legal Notices</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 col-xs-6 mt-md-0 mt-sm-5">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Help Center</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Cookie Preferenceses</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-6 mt-md-0 mt-sm-5">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Help Center</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Cookie Preferenceses</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-6 mt-md-0 mt-sm-5">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Gift Cards</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Terms of Use</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">Corporate Information</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
