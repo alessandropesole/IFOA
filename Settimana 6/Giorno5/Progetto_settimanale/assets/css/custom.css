@@ -1,3 +1,4 @@
+/*HOME-PAGE*/
 
 /*NAVBAR*/
 
@@ -97,4 +98,18 @@ footer svg {
 }
 footer .row {
     margin: 0 9vw 0 9vw
+}
+
+/*LOGIN-PAGE*/
+.navbar-profile {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.058), rgba(0, 0, 0, 0.926));;
+}
+
+
+
+.edit-button {
+    letter-spacing:0.2rem ;
+}
+.profile {
+    margin-top:10vh
 }
