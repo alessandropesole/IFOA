@@ -36,8 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             productDetailsContainer.innerHTML = viewProduct;
         })
-        .catch(error => console.error('Errore nel recupero dei dettagli del prodotto:', error));
-    } else {
-        console.error('ID del prodotto non trovato nella URL');
-    }
+       
+    } 
 });
