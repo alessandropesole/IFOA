@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back Office</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-dark">
+            <a class="navbar-brand mx-3" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Media_World_Logo.png" width="100"
+                    alt="logo">
+            </a>
+            <a class="text-light text-end mx-5" href="./back.html">Back Office</a>
+        </nav>
+    </header>
+
+
+    <h1 class="display-3 mb-5">Add Product</h1>
+    <form>
+        <div class="mb-3">
+            <label for="nameProduct" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nameProduct" placeholder="Nome prodotto">
+        </div>
+        <div class="mb-3">
+            <label for="descriptionProduct" class="form-label">Descrizione</label>
+            <input type="text" class="form-control" id="descriptionProduct" placeholder="Descrizione prodotto">
+        </div>
+        <div class="mb-3">
+            <label for="brandProduct" class="form-label">Brand</label>
+            <input type="text" class="form-control" id="brandProduct" placeholder="Nome Brand">
+        </div>
+        <div class="mb-3">
+            <label for="urlImage" class="form-label">Indirizzo immagine</label>
+            <input type="text" class="form-control " id="urlImage" placeholder="URL Immagine">
+        </div>
+        <div class="mb-3">
+            <label for="priceProduct" class="form-label">Prezzo</label>
+            <input type="text" class="form-control" id="priceProduct" placeholder="0,00$">
+        </div>
+        <div class="d-flex">
+            <div class=d-none>
+                <button type="button" class="btn btn-outline-danger px-5 ">Elimina</button>
+            </div>
+            <div class=>
+                <button type="button" class="btn btn-outline-secondary px-5 ">Modifica</button>
+                <button type="button" class="btn btn-warning px-5" onclick="sendData()">Salva</button>
+            </div>
+        </div>
+        </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    
+    <script src="assets/js/app.js"></script>
+    
+</body>
+
+</html>
