@@ -35,7 +35,7 @@ function createCard(products) {
           <p class="card-text">Caption: ${product.description}</p>
           <p class="card-text">Prezzo: ${product.price}</p>
           <div class="card-footer d-flex justify-content-between">
-          <button type="button" class="btn btn-warning"> <a href="./back.html">Modifica</a> </button>
+          <button type="button" class="btn btn-warning"> <a href="./back.html?id=${product._id}">Modifica</a> </button>
           <button type="button" class="btn btn-primary" )"><a href="./details.html?id=${product._id}" class="btn btn-primary">Dettagli</a></button>
       </div>
         </div>
