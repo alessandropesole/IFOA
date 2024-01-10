@@ -7,7 +7,6 @@ const MyFooter= () => {
         bottom: '0'       
     }
     return (
-        
         <>
         <Container fluid className="bg-dark text-white" style={footStyle}>
             <div className="text-center">

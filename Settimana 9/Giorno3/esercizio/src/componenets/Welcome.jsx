@@ -1,5 +1,4 @@
 import { Button } from "react-bootstrap"
-import FormFeedback from "./Form"
 
 
 const Jumbotron = () => {
