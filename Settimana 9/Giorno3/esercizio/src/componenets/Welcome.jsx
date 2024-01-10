@@ -1,14 +1,18 @@
 import { Button } from "react-bootstrap"
+import FeedbackForm from "./FeedbackForm"
+
 
 
 const Jumbotron = () => {
     return(
-        <div className="container-fluid" style={{height:'30vh', marginTop:'10vh'}}>
+        <>
+        <div className="container-fluid" style={{margin: '100px 0', marginTop:'10vh'}}>
             <h1>Libreria Pinuo</h1>
             <p>La prima libreria in React</p>
             <hr />
-            <Button variant="outline-success">Lascia una recensione</Button>
         </div>
+        <FeedbackForm />
+        </>
     )
 }
 
