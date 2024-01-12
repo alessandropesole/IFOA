@@ -4,7 +4,7 @@ import '../components/Custom.css'
 
 const Interface = () => {
     return (
-        <div className="d-flex justify-content-between" style={{ margin: '5vh 0' }}>
+        <div className="d-flex justify-content-between" style={{ margin: '2vh 0.8vw 2vh 0.8vw' }}>
             <div className="d-flex align-items-center">
                 <h1 style={{ color: 'white' }}>Tv Shows</h1>
                 <Dropdown className="mx-3">

@@ -13,14 +13,15 @@ function App() {
 
   return (
     <>
+    <Container fluid>
     <MyNavbar />
-    <Container>
+    
     <Interface/>  
-    <GalleryOne saga='the matrix' />
-    <GalleryOne saga='avatar'  />
-    <GalleryOne saga='pokemon' />
-    </Container>
+    <GalleryOne saga='batman' />
+    <GalleryOne saga='the lord of the rings'  />
+    <GalleryOne saga='black mirror' />
     <MyFooter />
+    </Container>
     
     </>
   )
