@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import MyNavbar from './components/MyNavbar';
@@ -14,16 +13,15 @@ function App() {
 
   return (
     <>
-    
     <MyNavbar />
     <Container>
-    <Interface/>
+    <Interface/>  
     <GalleryOne saga='the matrix' />
     <GalleryOne saga='avatar'  />
     <GalleryOne saga='pokemon' />
     </Container>
     <MyFooter />
-   
+    
     </>
   )
 }
