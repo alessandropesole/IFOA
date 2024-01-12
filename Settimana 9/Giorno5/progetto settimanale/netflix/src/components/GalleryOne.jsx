@@ -33,7 +33,11 @@ const GalleryOne = ({ saga  }) => {
       setError(true)
     }
   };
-
+  function capitalize(stringa) {
+    return stringa.replace(/\b\w/g, function(l) {
+        return l.toUpperCase();
+    });
+}
   useEffect(() => {
    fetchData();
   }, []);
@@ -41,7 +45,7 @@ const GalleryOne = ({ saga  }) => {
   return (
     <>
       <div style={{marginBottom:'10vh'}} >
-        <h3 style={{color:'white', margin:'1.5vh'}} >{saga.toUpperCase()}</h3>
+        <h3 style={{color:'white', margin:'1.5vh'}} >{capitalize(saga)}</h3>
         <Row sm={'12'} className='d-flex justify-content-center' >
            
           {films.slice(0,6).map((film) => (

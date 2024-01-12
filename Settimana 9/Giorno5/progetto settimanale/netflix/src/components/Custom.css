@@ -11,7 +11,9 @@
 
 #card-film:hover {
     transform:scale(1.1);
-    transition-duration: 0.7s;
+    transition-duration: 0.2s;
     cursor: pointer;
+    -webkit-box-shadow: 1px 3px 26px 5px #2B2B2B; 
+box-shadow: 1px 3px 26px 5px #2B2B2B;
 }
 
