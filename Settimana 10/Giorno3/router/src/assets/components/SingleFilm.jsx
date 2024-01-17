@@ -7,7 +7,7 @@ const SingleFilm = ({movie}) => {
         <Card style={{ width: '50rem' }}>
         <Card.Img variant="top" src={movie.Poster} />
         <Card.Body>
-          <Button variant="primary"> <Link to={`/moviedetails/${movie.imdbID}`}>Visualizza dettagli</Link></Button>
+          <Button variant="primary" > <Link className='text-white' to={`/moviedetails/${movie.imdbID}`}>Visualizza dettagli</Link></Button>
         </Card.Body>
       </Card>
 

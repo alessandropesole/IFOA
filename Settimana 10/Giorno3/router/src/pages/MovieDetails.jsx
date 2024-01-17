@@ -59,7 +59,7 @@ const MovieDetails = () => {
         </Card.Body>
         <ListGroup className="list-group-flush">
             {comments.map((comment)=>(
-                <ListGroup.Item key={comment._id} className='d-flex justify-content-between'><small>{comment.comment}</small><small>Rate: {comment.rate}</small></ListGroup.Item>
+                <ListGroup.Item key={comment._id} className='d-flex justify-content-between'><small>{comment.comment}</small><small className='ps-5'>Rate: {comment.rate}</small></ListGroup.Item>
             ))}  
         </ListGroup>
         <Card.Body>
