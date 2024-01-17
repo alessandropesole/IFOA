@@ -6,8 +6,8 @@ const SingleFilm = ({movie}) => {
     return (
         <Card style={{ width: '50rem' }}>
         <Card.Img variant="top" src={movie.Poster} />
-        <Card.Body>
-          <Button variant="primary" > <Link className='text-white' to={`/moviedetails/${movie.imdbID}`}>Visualizza dettagli</Link></Button>
+        <Card.Body className='d-flex justify-content-center align-items-center'>
+          <Button variant="primary" > <Link className=' text-white text-decoration-none' to={`/moviedetails/${movie.imdbID}`}>Visualizza dettagli</Link></Button>
         </Card.Body>
       </Card>
 
