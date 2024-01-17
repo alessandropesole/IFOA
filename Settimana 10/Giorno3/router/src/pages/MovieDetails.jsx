@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { Container } from 'react-bootstrap';
 
 
 const MovieDetails = () => {
@@ -47,7 +48,8 @@ const MovieDetails = () => {
     }, [])
 
     return (
-        <Card style={{ width: '18rem' }}>
+        <Container className='d-flex justify-content-center mt-5'>
+        <Card style={{ width: '30rem' }}>
         <Card.Img variant="top" src= {film.Poster} />
         <Card.Body>
           <Card.Title>{film.Title}</Card.Title>
@@ -64,6 +66,7 @@ const MovieDetails = () => {
           
         </Card.Body>
       </Card>
+      </Container>
     )
 }
 
