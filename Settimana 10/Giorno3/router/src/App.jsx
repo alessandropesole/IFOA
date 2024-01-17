@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import MyNavbar from './assets/components/MyNavbar';
+import MyNavbar from './components/MyNavbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import TvShows from './pages/TvShows';
 import Home from './pages/Home';

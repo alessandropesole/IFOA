@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import {Container, Row,Col} from 'react-bootstrap'
-import SingleFilm from '../assets/components/SingleFilm'
+import SingleFilm from '../components/SingleFilm'
 
 const TvShows = () => {
     const [search, setSearch] = useState('')
