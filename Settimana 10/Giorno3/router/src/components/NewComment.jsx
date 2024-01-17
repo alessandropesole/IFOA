@@ -10,6 +10,10 @@ const [newComment,setNewComment] = useState({
 
 const sendData =() => {
     postData(newComment)
+    setNewComment({
+        comment:'',
+        rate:''
+    })
 }
 
     return (
