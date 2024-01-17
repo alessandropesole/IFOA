@@ -83,14 +83,33 @@ console.log('quinto esercizio')
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
 */
 
+  const newObject = {
+    brand: 'Fiat',
+    model:'600',
+    color:'white',
+    trims: ['GT', 'rally']
+  }
+  cars.push(newObject)
+
+console.log(cars)
+
+
+ for (let i=0; i < cars.length; i++) {
+  cars[i].trims.pop()
+ }
+ console.log(cars);
 
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
 */
 
 //RISPOSTA
-const justTrims = []
-
+const justTrims = [];
+for (let i=0; i < cars.length; i++) {
+  let firstTrims = cars[i].trims.slice(0, 1);
+  justTrims.push(firstTrims)
+ }
+ console.log(justTrims);
 
 /* ESERCIZIO 8
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà

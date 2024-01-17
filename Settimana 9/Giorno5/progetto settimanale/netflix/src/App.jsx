@@ -15,7 +15,6 @@ function App() {
     <>
     <Container fluid>
     <MyNavbar />
-    
     <Interface/>  
     <GalleryOne saga='batman' />
     <GalleryOne saga='the lord of the rings'  />

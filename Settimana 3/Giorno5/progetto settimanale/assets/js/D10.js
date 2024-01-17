@@ -406,17 +406,46 @@ console.log(sumAllTheYears(movies))
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
-
-
+function searchByTitle (stringa) {
+for(let i = 0; i < movies.length; i++) {
+  if(movies[i].Title=== stringa) {
+    return movies[i]
+  }
+}
+}
+console.log(searchByTitle('The Lord of the Rings: The Fellowship of the Ring'));
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
+function searchAndDivide (stringa) {
+  let matchedObject = {
+    match: [],
+    unmatch : []
+   }
+  let arrayMatch = matchedObject.match
+  let arrayUnmatch = matchedObject.unmatch
+   for (i=0; i < movies.length; i++) {
+    if (movies[i].Title === stringa) {
+      arrayMatch.push(movies[i]);
+    }
+    else {
+      arrayUnmatch.push(movies[i]);
+    }
+   }
+   return matchedObject
+}
+console.log(searchAndDivide ('The Lord of the Rings: The Fellowship of the Ring'));
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+function removeIndex (number) {
+  movies.splice(number, 1);
+  return movies
+}
+console.log(removeIndex (2));
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
@@ -465,7 +494,7 @@ rosso();
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
-/*function aggiungiElementoLista (testo) {
+function aggiungiElementoLista (testo) {
   const nuovoItem = document.createElement('li');
   nuovoItem.textContent = testo; 
   const appendi = document.getElementById('myList');
@@ -510,6 +539,7 @@ aggiungiClasse();
     *
    ***
   *****
+  
 
 */
 
