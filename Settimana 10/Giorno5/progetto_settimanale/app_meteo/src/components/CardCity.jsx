@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap"
 import {useState, useEffect} from 'react'
 import '../assets/css/CardCity.css';
 
-
+//PRIMA FETCH
 const CardCity = ({city}) => {
     const [cityData, setCityData] = useState(
         {
@@ -52,6 +52,9 @@ const CardCity = ({city}) => {
 
     const baseURL = 'https://api.openweathermap.org/data/2.5/weather?q=';
     const key = '&APPID=25e1b8a92164beae4d571e17a214d5f2&units=metric';
+    const [nextdays, setNextDays] = useState([])
+    
+    
   
     useEffect(() => {
       const fetchData = async () => {
@@ -74,9 +77,29 @@ const CardCity = ({city}) => {
       fetchData();
     }, [city]);
 
+    //SECONDA FETCH
+    useEffect(() => {
+    const nextDaysFetch = async () => {
+        try {
+            const res = await fetch('https://api.openweathermap.org/data/2.5/forecast?lat='+ cityData.coord.lat +'&lon='+ cityData.coord.lon +'&appid=25e1b8a92164beae4d571e17a214d5f2&units=metric')
+            if(res.ok){
+            const data = await res.json();
+            setNextDays(data)
+            console.log(nextdays);
+        }
+        }
+        catch(error) {
+            console.log(error);
+        }
+    }
+  nextDaysFetch();  
+}, [cityData]);
+   
+
 
     return (
         <div id="div-card" >
+            
     <Container >
         <Row>
         <Col className="d-flex colonna ">
@@ -86,8 +109,8 @@ const CardCity = ({city}) => {
         </Row>
         <Row>
         <Col className="d-flex align-items-center ">
-            <h3>{cityData.weather[0].description}</h3>
-            <img style={{width:'100px'}} src={`./src/assets/icons/${cityData.weather[0].icon}.png`} />   
+            <h3 style={{marginTop:'15px'}}>{cityData.weather[0].main}</h3>
+            <img style={{width:'100px' , marginLeft:'10px'}} src={`./src/assets/icons/${cityData.weather[0].icon}.png`} />   
         </Col>
         </Row>
         
@@ -95,10 +118,7 @@ const CardCity = ({city}) => {
         <Col className="d-flex align-items-center colonna">
             <p>Max: {cityData.main.temp_max.toFixed(0)}°</p>
             <p>Min: {cityData.main.temp_min.toFixed(0)}°</p>
-            
-            
-            <p>Umidity: {cityData.main.humidity.toFixed(0)}%</p>
-            
+            <p>Umidity: {cityData.main.humidity.toFixed(0)}%</p>   
         </Col>
         </Row>
         <Row>
@@ -110,8 +130,9 @@ const CardCity = ({city}) => {
         </Row>
         
     </Container>
-    </div>
+    </div> 
     )
 }
 export default CardCity
 
+//('api.openweathermap.org/data/2.5/forecast?lat='+ cityData.coord.lat +'&lon='+ cityData.coord.lon +'&appid=25e1b8a92164beae4d571e17a214d5f2&units=metric')
