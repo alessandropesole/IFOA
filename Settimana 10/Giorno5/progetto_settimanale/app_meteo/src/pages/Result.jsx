@@ -9,7 +9,9 @@ const Result = () => {
     
     return (
         <>
+        <div style={{marginTop:'15vh'}}className="d-flex justify-content-center">
            <CardCity city= {searchCity}> </CardCity>
+           </div>
         </>
     )
     

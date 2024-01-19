@@ -1,0 +1,9 @@
+#div-card {
+    background-color: rgba(255, 255, 255, 0.575); 
+    border-radius: 50px;
+    padding: 30px;
+}
+
+.colonna >p {
+    padding-right:10px
+}

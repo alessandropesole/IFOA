@@ -1,5 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap"
 import {useState, useEffect} from 'react'
+import '../assets/css/CardCity.css';
 
 
 const CardCity = ({city}) => {
@@ -50,7 +51,7 @@ const CardCity = ({city}) => {
     );
 
     const baseURL = 'https://api.openweathermap.org/data/2.5/weather?q=';
-    const key = '&APPID=25e1b8a92164beae4d571e17a214d5f2';
+    const key = '&APPID=25e1b8a92164beae4d571e17a214d5f2&units=metric';
   
     useEffect(() => {
       const fetchData = async () => {
@@ -73,34 +74,43 @@ const CardCity = ({city}) => {
       fetchData();
     }, [city]);
 
-    
+
     return (
-    <Container>
+        <div id="div-card" >
+    <Container >
         <Row>
-        <Col>
+        <Col className="d-flex colonna ">
             <h1>{cityData.name}, {cityData.sys.country}</h1>
+            <h1 className="ms-4">{cityData.main.temp.toFixed(0)}°</h1>
         </Col>
         </Row>
         <Row>
-        <Col>
-            <h3>{cityData.weather[0].main}</h3>
+        <Col className="d-flex align-items-center ">
+            <h3>{cityData.weather[0].description}</h3>
+            <img style={{width:'100px'}} src={`./src/assets/icons/${cityData.weather[0].icon}.png`} />   
+        </Col>
+        </Row>
+        
+        <Row>
+        <Col className="d-flex align-items-center colonna">
+            <p>Max: {cityData.main.temp_max.toFixed(0)}°</p>
+            <p>Min: {cityData.main.temp_min.toFixed(0)}°</p>
+            
+            
+            <p>Umidity: {cityData.main.humidity.toFixed(0)}%</p>
+            
         </Col>
         </Row>
         <Row>
-        <Col className="d-flex">
-            <p>Max: {cityData.main.temp_max}</p>
-            <p>Min: {cityData.main.temp_min}</p>
-            <p>Umidità: {cityData.main.humidity}%</p>
-        </Col>
-        </Row>
-        <Row>
-        <Col className="d-flex">
-            <p>{cityData.sys.sunrise}</p>
-            <p>{cityData.sys.sunset}</p>
+        <Col className="d-flex colonna align-items-center">
+        <img style={{width:'50px'}}src="./src/assets/icons/wind.png"/>
+            <p style={{marginTop:'20px'}}>Wind: {cityData.wind.speed} Knots</p>
+           
         </Col>
         </Row>
         
     </Container>
+    </div>
     )
 }
 export default CardCity
