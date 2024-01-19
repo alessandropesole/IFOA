@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route>
         <Route path ='/' element= {<Home />} />
-        <Route path = '/citta' element={<Result />} />
+        <Route path = '/searchresults' element={<Result />} />
         </Route>
       </Routes>
     </BrowserRouter>
