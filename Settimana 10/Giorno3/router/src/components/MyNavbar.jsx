@@ -13,7 +13,7 @@ function MyNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link className="text-light" onClick={() => navigate('/')}>Home</Nav.Link>
-            <Nav.Link className="text-light" onClick={() => navigate('/tvshows')}>TvShows</Nav.Link>
+            <Nav.Link className="text-light" onClick={() => navigate('/tvshows')}>Tv Shows</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

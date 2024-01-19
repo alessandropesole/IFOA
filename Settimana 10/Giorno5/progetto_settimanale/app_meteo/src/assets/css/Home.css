@@ -1,0 +1,16 @@
+#home{
+display: flex;
+flex-direction: column;
+margin-top: 10vh;
+align-items: center;
+background-color: rgba(255, 255, 255, 0.575);
+width: 20vw;
+border-radius: 20px;
+padding: 30vh 0
+}
+
+#input-text {
+    border-radius: 15px;
+    padding: 7px 3px;
+    border:none
+}

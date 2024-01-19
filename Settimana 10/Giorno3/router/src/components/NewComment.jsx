@@ -19,7 +19,7 @@ const sendData =() => {
     return (
         <div className="d-flex flex-column justify-content-center align-items-center">
     <Form.Control type="text" placeholder="Type your comment..." value={newComment.comment} onChange={(e) => setNewComment({...newComment, comment: e.target.value}) } />
-    <Form.Select aria-label="Default select example" value={newComment.rate} onChange={(e) => setNewComment({...newComment, rate: e.target.value})}>
+    <Form.Select className="mt-1" aria-label="Default select example" value={newComment.rate} onChange={(e) => setNewComment({...newComment, rate: e.target.value})}>
                     <option>Select a rate</option>
                     <option value="5">5</option>
                     <option value="4">4</option>
