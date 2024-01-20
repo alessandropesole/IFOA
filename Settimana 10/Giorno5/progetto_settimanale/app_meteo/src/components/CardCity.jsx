@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react'
 import '../assets/css/CardCity.css';
 import Graphic from "./Graphic";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+import CardsNextDays from "./CardsNextDays";
 
 //PRIMA FETCH
 const CardCity = ({city}) => {
@@ -1560,13 +1561,17 @@ const CardCity = ({city}) => {
 
 
     return (
-        <div id="div-card" >
+        <>
+        <div id="div-card"  >
             
     <Container className="d-flex flex-column align-items-center"  >
-        
+        <Row className="mb-3">
+            <Col>
+            <h2>Forecast for today:</h2>
+            </Col>
+        </Row>
         <Row>
-        <Col className="d-flex colonna ">
-            
+        <Col className="d-flex colonna "> 
             <h1>{cityData.name}, {cityData.sys.country}</h1>
             <h1 className="ms-4">{cityData.main.temp.toFixed(0)}°</h1>
         </Col>
@@ -1581,28 +1586,39 @@ const CardCity = ({city}) => {
         <Row>
         <Col className="d-flex align-items-center colonna">
         
-            <p>Min: {cityData.main.temp_min.toFixed(0)}° / Max: {cityData.main.temp_max.toFixed(0)}°</p>  
-            <p>Feels like: {cityData.main.feels_like.toFixed(0)}°</p>
+            <h5>Min: {cityData.main.temp_min.toFixed(0)}° / Max: {cityData.main.temp_max.toFixed(0)}°</h5>  
+            <h5>Feels like: {cityData.main.feels_like.toFixed(0)}°</h5>
             <img style={{width:'35px', marginBottom:'15px'}} src="./src/assets/icons/termometer.png" /> 
         </Col>
         </Row>
         <Row>
             <Col className="d-flex align-items-center colonna">
-            <p>Umidity: {cityData.main.humidity.toFixed(0)}%</p>   
+            <h5>Umidity: {cityData.main.humidity.toFixed(0)}%</h5>   
             <img style={{width:'40px', marginBottom:'15px'}} src="./src/assets/icons/drop.png" /> 
             </Col>
         </Row>
         <Row>
         <Col className="d-flex colonna align-items-center">
-            <p>Pressure: {cityData.main.pressure} mbar / Wind: {cityData.wind.speed} Knots</p>
+            <h5>Pressure: {cityData.main.pressure} mbar / Wind: {cityData.wind.speed} Knots</h5>
             
             <img style={{width:'40px', marginBottom:'15px'}}src="./src/assets/icons/wind.png"/>
            
         </Col>
         </Row>
     </Container>
+    <Container className="d-flex flex-column align-items-center mt-5">
+        <h3 className="mb-3">Temperatures over the next 4 days: </h3>
     <Graphic day= {nextdays} />
+    </Container>
+    <Container className="d-flex flex-column align-items-center" style={{marginTop:'10vh'}}>
+        <h3 className="mb-3">Forecast for the next few days: </h3>
+    {nextdays.list.map((nextday)=> (
+        <CardsNextDays nextDay={nextday} />
+    ))}
+    </Container>
     </div> 
+    
+    </>
     )
 }
 export default CardCity

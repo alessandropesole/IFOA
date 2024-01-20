@@ -1,40 +1,25 @@
+import {Col,  Row } from "react-bootstrap"
 
 
 const CardsNextDays = ({nextDay}) => {
-    return (
-        <div>
-        <Container >
-            <Row>
-            <Col className="d-flex colonna ">
-                <h1>{nextDay.dt_txt}</h1>
-                <h1 className="ms-4">{nextDay.list[0].main.temp.toFixed(0)}°</h1>
+    return ( 
+        <>
+            <Row className="d-flex align-items-center mb-3">
+            <Col>
+            <img width='140px' className="ms-5" src={`./src/assets/icons/${nextDay.weather[0].icon}.png`} />
             </Col>
-            </Row>
-            <Row>
-            <Col className="d-flex align-items-center ">
-                <h3>{nextDay.weather[0].description}</h3>
-                <img style={{width:'100px'}} src={`./src/assets/icons/${nextDay.weather[0].icon}.png`} />   
-            </Col>
-            </Row>
+            <Col>
+            <div>
+            <h3 className=" ">{nextDay.main.temp.toFixed(0)}°</h3>
+            </div>
+            <div className="d-flex">
+            <h5 className="m-0">{nextDay.dt_txt}</h5> 
             
-            <Row>
-            <Col className="d-flex align-items-center colonna">
-                <p>Max: {nextDay.list[0].main.temp_max.toFixed(0)}°</p>
-                <img style={{width:'50px'}} src="./src/assets/icons/temperature.png" /> 
-                <p>Min: {nextDay.list[0].main.temp_min.toFixed(0)}°</p>
-                <p>Umidity: {nextDay.list[0].main.humidty}%</p>   
+            </div>
             </Col>
             </Row>
-            <Row>
-            <Col className="d-flex colonna align-items-center">
-            <img style={{width:'50px'}}src="./src/assets/icons/wind.png"/>
-                <p style={{marginTop:'20px'}}>Wind: {nextDay.list.wind.speed} Knots</p>  
-            </Col>
-            </Row>  
-        </Container>
-       
-        </div> 
-
+      
+            </>
     )
-
 }
+export default CardsNextDays

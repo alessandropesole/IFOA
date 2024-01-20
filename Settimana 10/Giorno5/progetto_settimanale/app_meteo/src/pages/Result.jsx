@@ -9,7 +9,7 @@ const Result = () => {
     
     return (
         <>
-        <div style={{marginTop:'5vh'}}className="d-flex justify-content-center">
+        <div style={{margin:'5vh 0'}}className="d-flex justify-content-center">
            <CardCity city= {searchCity}> </CardCity>
            </div>
         </>

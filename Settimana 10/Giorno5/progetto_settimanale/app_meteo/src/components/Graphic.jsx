@@ -10,14 +10,17 @@ const Graphic = ({day}) => {
     ];
 
     return(
-    <LineChart width={600} height={300} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
-    <Line type="monotone" dataKey="temperature" stroke="#8884d8" />
-    <CartesianGrid stroke="#A7B9BB" strokeDasharray="5 5" />
-    <XAxis  dataKey="name" />
-    <YAxis dataKey="temperature" />
+      <>
+      
+    <LineChart width={600} height={300} data={data} margin={{ top: 5, right: 50, bottom: 5, left: 0 }}>
+    <Line type="monotone" dataKey="temperature" stroke="rgb(0, 8, 255)" />
+    <CartesianGrid stroke="rgba(74, 0, 134, 0.85)" strokeDasharray="3 3" />
+    <XAxis  stroke="rgb(0, 0,0)" dataKey="name" />
+    <YAxis stroke="rgb(0, 0,0)" dataKey="temperature" />
     <Tooltip />
   </LineChart>
-  )
-
+ 
+  </>
+ )
 }
 export default Graphic
