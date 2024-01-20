@@ -8,7 +8,7 @@ const CardsNextDays = ({nextDay, trasformaData }) => {
         let componentiData = newDate.split('-');
         let giorno = componentiData[2];
         let mese = componentiData[1];
-        let dataConvertita = giorno + '-' + mese;
+        let dataConvertita = giorno + '/' + mese;
         return dataConvertita;
       }
 
