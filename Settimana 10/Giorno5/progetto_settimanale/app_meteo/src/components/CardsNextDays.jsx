@@ -2,6 +2,9 @@ import {Col,  Row } from "react-bootstrap"
 
 
 const CardsNextDays = ({nextDay}) => {
+
+ 
+
     return ( 
         <>
             <Row className="d-flex align-items-center mb-3">
@@ -12,9 +15,9 @@ const CardsNextDays = ({nextDay}) => {
             <div>
             <h3 className=" ">{nextDay.main.temp.toFixed(0)}°</h3>
             </div>
-            <div className="d-flex">
-            <h5 className="m-0">{nextDay.dt_txt}</h5> 
-            
+            <div >
+            <h5 className="m-0">{nextDay.dt_txt.slice(0, 10)}</h5> 
+            <h5 className="m-0">{nextDay.dt_txt.slice(11, 16)}</h5> 
             </div>
             </Col>
             </Row>

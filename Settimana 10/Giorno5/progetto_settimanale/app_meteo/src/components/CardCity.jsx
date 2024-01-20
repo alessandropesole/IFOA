@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap"
 import {useState, useEffect} from 'react'
 import '../assets/css/CardCity.css';
 import Graphic from "./Graphic";
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+
 import CardsNextDays from "./CardsNextDays";
 
 //PRIMA FETCH
@@ -1527,7 +1527,7 @@ const CardCity = ({city}) => {
             if (resp.ok) {
               const data = await resp.json();
               setCityData(data);
-                console.log(cityData);
+                //console.log(cityData);
             } else {
               console.error('Error in the HTTP request');
             }
@@ -1548,7 +1548,7 @@ const CardCity = ({city}) => {
             if(res.ok){
             const data = await res.json();
             setNextDays(data)
-            console.log(nextdays);
+           // console.log(nextdays);
         }
         }
         catch(error) {
@@ -1558,6 +1558,7 @@ const CardCity = ({city}) => {
     
   nextDaysFetch();  
 }, [cityData]);
+
 
 
     return (
@@ -1613,7 +1614,7 @@ const CardCity = ({city}) => {
     <Container className="d-flex flex-column align-items-center" style={{marginTop:'10vh'}}>
         <h3 className="mb-3">Forecast for the next few days: </h3>
     {nextdays.list.map((nextday)=> (
-        <CardsNextDays nextDay={nextday} />
+        <CardsNextDays nextDay={nextday} key={nextday.dt_txt} />
     ))}
     </Container>
     </div> 
