@@ -1607,7 +1607,7 @@ const CardCity = ({city}) => {
         </Row>
     </Container>
     <Container className="d-flex flex-column align-items-center mt-5">
-        <h3 className="mb-3">Temperatures over the next 4 days: </h3>
+        <h3 className="mb-3">Temperatures over the next 3 days: </h3>
     <Graphic day= {nextdays} />
     </Container>
     <Container className="d-flex flex-column align-items-center" style={{marginTop:'10vh'}}>
