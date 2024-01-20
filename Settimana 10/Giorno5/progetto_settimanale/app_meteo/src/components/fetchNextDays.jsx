@@ -1,105 +1,53 @@
-import { Col, Container, Row } from "react-bootstrap"
-import {useState, useEffect} from 'react'
-import '../assets/css/CardCity.css';
-import Graphic from "./Graphic";
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+import{useState, useEffect} from 'react'
 
-//PRIMA FETCH
-const CardCity = ({city}) => {
-    const [cityData, setCityData] = useState(
-        {
-            "coord": {
-                "lon": 0,
-                "lat": 0
-            },
-            "weather": [
-                {
-                    "id": 0,
-                    "main": "",
-                    "description": "",
-                    "icon": ""
-                }
-            ],
-            "base": "",
-            "main": {
-                "temp": 0,
-                "feels_like": 0,
-                "temp_min": 0,
-                "temp_max": 0,
-                "pressure": 0,
-                "humidity": 0
-            },
-            "visibility": 0,
-            "wind": {
-                "speed": 0,
-                "deg": 0
-            },
-            "clouds": {
-                "all": 0
-            },
-            "dt": 0,
-            "sys": {
-                "type": 0,
-                "id": 0,
-                "country": "",
-                "sunrise": 0,
-                "sunset": 0
-            },
-            "timezone": 0,
-            "id": 0,
-            "name": "",
-            "cod": 0
-        }
-    );
+const fetchNextDays = () => {
 
-    const baseURL = 'https://api.openweathermap.org/data/2.5/weather?q=';
-    const key = '&APPID=25e1b8a92164beae4d571e17a214d5f2&units=metric';
     const [nextdays, setNextDays] = useState(
         {
-            "cod": "",
+            "cod": "200",
             "message": 0,
-            "cnt": 0,
+            "cnt": 40,
             "list": [
                 {
-                    "dt": 0,
+                    "dt": 1705741200,
                     "main": {
-                        "temp": 0,
-                        "feels_like": 0,
-                        "temp_min": 0,
-                        "temp_max": 0,
-                        "pressure": 0,
-                        "sea_level": 0,
-                        "grnd_level": 0,
-                        "humidity": 0,
-                        "temp_kf": 0
+                        "temp": 1.91,
+                        "feels_like": 1.91,
+                        "temp_min": 1.91,
+                        "temp_max": 2.93,
+                        "pressure": 1029,
+                        "sea_level": 1029,
+                        "grnd_level": 1014,
+                        "humidity": 71,
+                        "temp_kf": -1.02
                     },
                     "weather": [
                         {
-                            "id": 0,
-                            "main": "",
-                            "description": "",
-                            "icon": ""
+                            "id": 800,
+                            "main": "Clear",
+                            "description": "clear sky",
+                            "icon": "01d"
                         }
                     ],
                     "clouds": {
                         "all": 0
                     },
                     "wind": {
-                        "speed": 0,
-                        "deg": 0,
-                        "gust": 0
+                        "speed": 1.22,
+                        "deg": 293,
+                        "gust": 2.19
                     },
-                    "visibility": 0,
+                    "visibility": 10000,
                     "pop": 0,
                     "sys": {
-                        "pod": ""
+                        "pod": "d"
                     },
-                    "dt_txt": ""
+                    "dt_txt": "2024-01-20 09:00:00"
                 },
                 {
-                    "dt": 0,
+                    "dt": 1705752000,
                     "main": {
-                        "temp": 0,
+                        "temp": 3.15,
                         "feels_like": 1.16,
                         "temp_min": 3.15,
                         "temp_max": 5.63,
@@ -1515,95 +1463,23 @@ const CardCity = ({city}) => {
                 "sunset": 1705767073
             }
         })
-    
-    
-  
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          if (city) {
-            const resp = await fetch(baseURL + city + key);
-            if (resp.ok) {
-              const data = await resp.json();
-              setCityData(data);
-                console.log(cityData);
-            } else {
-              console.error('Error in the HTTP request');
+        useEffect(() => {
+            const nextDaysFetch = async () => {
+                try {
+                    const res = await fetch('https://api.openweathermap.org/data/2.5/forecast?lat='+ cityData.coord.lat +'&lon='+ cityData.coord.lon +'&appid=25e1b8a92164beae4d571e17a214d5f2&units=metric')
+                    if(res.ok){
+                    const data = await res.json();
+                    setNextDays(data)
+                    console.log(nextdays);
+                }
+                }
+                catch(error) {
+                    console.log(error);
+                }
             }
-          }
-        } catch (error) {
-          console.error('Error in the HTTP request:', error);
-        }
-      };
-  
-      fetchData();
-    }, [city]);
-
-    //SECONDA FETCH
-    useEffect(() => {
-    const nextDaysFetch = async () => {
-        try {
-            const res = await fetch('https://api.openweathermap.org/data/2.5/forecast?lat='+ cityData.coord.lat +'&lon='+ cityData.coord.lon +'&appid=25e1b8a92164beae4d571e17a214d5f2&units=metric')
-            if(res.ok){
-            const data = await res.json();
-            setNextDays(data)
-            console.log(nextdays);
-        }
-        }
-        catch(error) {
-            console.log(error);
-        }
-    }
-    
-  nextDaysFetch();  
-}, [cityData]);
-
-
-    return (
-        <div id="div-card" >
-            
-    <Container className="d-flex flex-column align-items-center"  >
+            if (nextdays?.length>0)
+          nextDaysFetch();  
+        }, [nextdays]);
         
-        <Row>
-        <Col className="d-flex colonna ">
-            
-            <h1>{cityData.name}, {cityData.sys.country}</h1>
-            <h1 className="ms-4">{cityData.main.temp.toFixed(0)}°</h1>
-        </Col>
-        </Row>
-        <Row>
-        <Col className="d-flex align-items-center ">
-            <h3 style={{marginTop:'15px'}}>{cityData.weather[0].main}</h3>
-            <img style={{width:'100px' , marginLeft:'10px'}} src={`./src/assets/icons/${cityData.weather[0].icon}.png`} />   
-        </Col>
-        </Row>
-        
-        <Row>
-        <Col className="d-flex align-items-center colonna">
-        
-            <p>Min: {cityData.main.temp_min.toFixed(0)}° / Max: {cityData.main.temp_max.toFixed(0)}°</p>  
-            <p>Feels like: {cityData.main.feels_like.toFixed(0)}°</p>
-            <img style={{width:'35px', marginBottom:'15px'}} src="./src/assets/icons/termometer.png" /> 
-        </Col>
-        </Row>
-        <Row>
-            <Col className="d-flex align-items-center colonna">
-            <p>Umidity: {cityData.main.humidity.toFixed(0)}%</p>   
-            <img style={{width:'40px', marginBottom:'15px'}} src="./src/assets/icons/drop.png" /> 
-            </Col>
-        </Row>
-        <Row>
-        <Col className="d-flex colonna align-items-center">
-            <p>Pressure: {cityData.main.pressure} mbar / Wind: {cityData.wind.speed} Knots</p>
-            
-            <img style={{width:'40px', marginBottom:'15px'}}src="./src/assets/icons/wind.png"/>
-           
-        </Col>
-        </Row>
-    </Container>
-    <Graphic day= {nextdays} />
-    </div> 
-    )
 }
-export default CardCity
-
+export default fetchNextDays

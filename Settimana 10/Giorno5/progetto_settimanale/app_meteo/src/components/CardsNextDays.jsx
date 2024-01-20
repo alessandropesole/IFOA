@@ -20,6 +20,7 @@ const CardsNextDays = ({nextDay}) => {
             <Row>
             <Col className="d-flex align-items-center colonna">
                 <p>Max: {nextDay.list[0].main.temp_max.toFixed(0)}°</p>
+                <img style={{width:'50px'}} src="./src/assets/icons/temperature.png" /> 
                 <p>Min: {nextDay.list[0].main.temp_min.toFixed(0)}°</p>
                 <p>Umidity: {nextDay.list[0].main.humidty}%</p>   
             </Col>
@@ -27,12 +28,11 @@ const CardsNextDays = ({nextDay}) => {
             <Row>
             <Col className="d-flex colonna align-items-center">
             <img style={{width:'50px'}}src="./src/assets/icons/wind.png"/>
-                <p style={{marginTop:'20px'}}>Wind: {nextDay.list.wind.speed} Knots</p>
-               
+                <p style={{marginTop:'20px'}}>Wind: {nextDay.list.wind.speed} Knots</p>  
             </Col>
-            </Row>
-            
+            </Row>  
         </Container>
+       
         </div> 
 
     )
